@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7e37925-ef0d-4994-b9e9-42fbf751b59f" name="Default Changelist" comment="" />
+    <list default="true" id="c7e37925-ef0d-4994-b9e9-42fbf751b59f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/student/utils/add-exp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/utils/delete-exp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/home.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +19,11 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1aA4VHV4FZsf4jUUP60jbkLmHre" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,11 +36,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ethicalapprover\student" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\ethicalapprover\student\utils" />
+      <recent name="C:\xampp\htdocs\ethicalapprover\student" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\ethicalapprover\student" />
     </key>
   </component>
@@ -43,7 +54,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586165096685</updated>
-      <workItem from="1586165118280" duration="5616000" />
+      <workItem from="1586165118280" duration="5876000" />
+      <workItem from="1586252699548" duration="4263000" />
     </task>
     <servers />
   </component>
@@ -51,17 +63,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="517" y="288" key="NewPhpFileDialog" timestamp="1586165173127">
+    <state x="517" y="288" key="NewPhpFileDialog" timestamp="1586253907240">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1586165173127" />
+    <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1586253907240" />
     <state x="184" y="7" key="SettingsEditor" timestamp="1586170817252">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586170817252" />
-    <state x="379" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1586165131828">
+    <state x="379" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1586253045016">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="368" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586165131828" />
+    <state x="379" y="368" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586253045016" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586254002486">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586254002486" />
   </component>
 </project>
