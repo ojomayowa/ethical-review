@@ -2,22 +2,22 @@
 session_start();
 require "../../db/db.php";
 if($_POST){
-    $username = trim($_POST['username']);
+    $staff_id = trim($_POST['staff_id']);
     $password = md5(trim($_POST['password']));
 
-    if(empty($username) || empty($password)){
+    if(empty($staff_id) || empty($password)){
         $_SESSION['error'] = "One or more field is empty";
-        header("location: ../index.php");
+        header("location: ../INDEX.php");
         die();
     }
 
-    $query = mysqli_query($connection, "SELECT * FROM student WHERE (student_id = '$username' OR email = '$username') AND password = '$password' ");
+    $query = mysqli_query($connection, "SELECT * FROM administrators WHERE staff_id = '$staff_id'  AND password = '$password' ");
     $count = mysqli_num_rows($query);
 
     if($count === 1){
         $fetch = mysqli_fetch_array($query);
-        $_SESSION['id'] = $fetch['student_id'];
-        $_SESSION['name'] = $fetch['fullname'];
+        $_SESSION['staff_id'] = $fetch['staff_id'];
+        $_SESSION['name'] = $fetch['name'];
         $_SESSION['success'] = "Login successful";
         header("location: ../home.php");
         die();
