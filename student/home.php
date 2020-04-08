@@ -84,15 +84,16 @@ require "../db/db.php";
                                 $status = $row['approval_status'];
                                 if($status == 1){
                                     echo "Approved";
-                                }elseif($status == 2){
+                                }elseif($status == 2) {
                                     echo "Rejected";
-                                }else{
-                                    echo "Not yet reviewed";
-                                }
-                                ?>
+                                }elseif($status == 3){
+                                    echo "Submitted for approval";
+                                }else{ ?>
+                                    <a href="submit.php?id=<?php echo $row['id'];?>"> Submit for approval </a>
+                                <?php } ?>
                             </td>
                             <td class="column4"><?php echo $row['created_at'];?></td>
-                            <td class="column5"> <a href="utils/delete-exp.php?id=<?php echo $row['id'];?>">delete</a> - <a href="">edit</a> </td>
+                            <td class="column5"> <a href="utils/delete-exp.php?id=<?php echo $row['id'];?>">delete</a> </td>
                         </tr>
                     <?php } ?>
                     </tbody>
