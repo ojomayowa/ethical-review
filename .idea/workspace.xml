@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7e37925-ef0d-4994-b9e9-42fbf751b59f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/student/edit-approval.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/utils/update-approval-submit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/utils/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/utils/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/submit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/utils/submit-exp.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/utils/submit-request.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,17 +30,18 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/student/utils" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ethicalapprover\student\utils" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\ethicalapprover\student" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ethicalapprover\student\utils" />
       <recent name="C:\xampp\htdocs\ethicalapprover\student" />
     </key>
   </component>
@@ -51,7 +56,8 @@
       <option name="presentableId" value="Default" />
       <updated>1586165096685</updated>
       <workItem from="1586165118280" duration="5876000" />
-      <workItem from="1586252699548" duration="10727000" />
+      <workItem from="1586252699548" duration="11550000" />
+      <workItem from="1586697283240" duration="3895000" />
     </task>
     <task id="LOCAL-00001" summary="added experiment delete and create actions">
       <created>1586257257868</created>
@@ -67,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586342216455</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added admin">
+      <created>1586343156756</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586343156756</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,17 +89,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added experiment delete and create actions" />
     <MESSAGE value="added experiment approval requests submission" />
-    <option name="LAST_COMMIT_MESSAGE" value="added experiment approval requests submission" />
+    <MESSAGE value="added admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="added admin" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586342503038">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586342503038" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1586342214239">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1586343154871">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586342214239" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586343154871" />
     <state x="517" y="288" key="NewPhpFileDialog" timestamp="1586253907240">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -95,14 +109,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586170817252" />
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1586342221060">
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1586343158743">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586342221060" />
-    <state x="379" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1586253045016">
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586343158743" />
+    <state x="518" y="223" key="com.intellij.ide.util.TipDialog" timestamp="1586697290733">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="368" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586253045016" />
+    <state x="518" y="223" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586697290733" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1586698386553">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586698386553" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586254002486">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

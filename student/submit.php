@@ -64,7 +64,7 @@ $query = mysqli_query($connection, "SELECT * FROM experiments WHERE id = '$id'")
         <div class="form-body" style="width: 400px; border: none">
             <h4> ADD NEW EXPERIMENT APPROVAL REQUEST </h4>
             <hr>
-            <form action="utils/submit-exp.php" method="post" enctype="multipart/form-data">
+            <form action="utils/submit-request.php" method="post" enctype="multipart/form-data">
                 <div class="form-wrapper">
                     <label> <b>Reason why experiment should be approved (required)</b> </label>
                     <textarea name="reasons" required style="height: 200px;"></textarea>

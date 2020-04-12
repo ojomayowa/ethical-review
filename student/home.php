@@ -86,10 +86,14 @@ require "../db/db.php";
                                     echo "Approved";
                                 }elseif($status == 2) {
                                     echo "Rejected";
-                                }elseif($status == 3){
-                                    echo "Submitted for approval";
-                                }else{ ?>
-                                    <a href="submit.php?id=<?php echo $row['id'];?>"> Submit for approval </a>
+                                }elseif($status == 3){ ?>
+
+                                    Submitted for approval <br>
+                                    <a href="edit-approval.php?id=<?php echo $row['id']?>">Edit approval request</a>
+
+                                <?php
+                                    }else{ ?>
+                                        <a href="submit.php?id=<?php echo $row['id'];?>"> Submit for approval </a>
                                 <?php } ?>
                             </td>
                             <td class="column4"><?php echo $row['created_at'];?></td>
