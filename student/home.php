@@ -97,7 +97,10 @@ require "../db/db.php";
                                 <?php } ?>
                             </td>
                             <td class="column4"><?php echo $row['created_at'];?></td>
-                            <td class="column5"> <a href="utils/delete-exp.php?id=<?php echo $row['id'];?>">delete</a> </td>
+                            <td class="column5">
+                                <a href="utils/delete-exp.php?id=<?php echo $row['id'];?>">delete</a> -
+                                <a href="edit-experiment.php?id=<?php echo $row['id'];?>">edit</a>
+                            </td>
                         </tr>
                     <?php } ?>
                     </tbody>
