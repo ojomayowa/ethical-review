@@ -10,6 +10,7 @@ main {
     width: 100%;
     height: auto;
     margin: 0px auto 60px auto;
+    color: black;
 }
 
 header, footer {
@@ -20,6 +21,30 @@ header, footer {
     color: white;
     font-size: 16px;
     font-weight: bold;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+nav ul li a:hover{
+    color: #800080;
 }
 
 header a,

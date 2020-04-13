@@ -13,7 +13,7 @@ if($_POST){
         die();
     }
 
-    $query = mysqli_query($connection, "SELECT * FROM student WHERE student_id = '$student_id' OR email = '$email'");
+    $query = mysqli_query($connection, "SELECT * FROM students WHERE student_id = '$student_id' OR email = '$email'");
     $count = mysqli_num_rows($query);
 
     if($count > 0){
@@ -22,7 +22,7 @@ if($_POST){
         die();
     }
 
-    $query = mysqli_query($connection, "INSERT INTO student (fullname, student_id, email, password) VALUES ('$name', '$student_id', '$email', '$password')");
+    $query = mysqli_query($connection, "INSERT INTO students (fullname, student_id, email, password) VALUES ('$name', '$student_id', '$email', '$password')");
     if($query){
         $_SESSION['success'] = "Registration successful. Login below";
         header("location: ../index.php");

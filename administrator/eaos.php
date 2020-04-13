@@ -7,7 +7,7 @@ require "../db/db.php";
         die();
     }
 
-    $submitted_requests = mysqli_query($connection, 'SELECT students.id AS sid, submitted_requests.id AS srid, experiments.id AS eid, students.*, experiments.*, submitted_requests.* FROM `submitted_requests` LEFT JOIN experiments ON submitted_requests.experiment_id = experiments.id LEFT JOIN students ON submitted_requests.student_id = students.student_id ORDER BY submitted_requests.id');
+    $submitted_requests = mysqli_query($connection, 'SELECT * FROM experiment_approval_officers ORDER BY name ASC')
 ?>
 <html>
     <head>
@@ -52,36 +52,26 @@ require "../db/db.php";
             ?>
         </div>
         <main>
-            <h4> Home </h4>
+            <h4> Experiment Approval Officers - <a href="add-eaO.php">add new</a></h4>
             <table>
                 <thead>
                     <tr class="table100-head">
                         <th class="column1"> S/N </th>
-                        <th class="column2"> Student Name </th>
-                        <th class="column3"> Experiment Title </th>
-                        <th class="column5"> Request Status </th>
-                        <th class="column4"> Experiment Approval Officer </th>
+                        <th class="column2"> Name </th>
+                        <th class="column3"> Email </th>
+                        <th class="column5"> Date Added </th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php $i = 1; while($row = mysqli_fetch_array($submitted_requests)){?>
                         <tr>
                             <td> <?php echo $i++;?></td>
-                            <td> <?php echo $row['fullname']?></td>
-                            <td> <?php echo $row['title']?></td>
-                            <td>
-                                <?php
-                                $status = $row['approval_status'];
-                                if($status == 1){
-                                    echo "Approved";
-                                }elseif($status == 2) {
-                                    echo "Rejected";
-                                }else{ ?>
-                                    Not yet assigned
-                                <?php } ?>
-
+                            <td> <?php echo $row['name']?></td>
+                            <td> <?php echo $row['email']?></td>
+                            <td> <?php echo $row['created_at']?>
+                                <br>
+                                <a href="utils/delete-eao.php?id=<?php echo $row['id']?>">delete</a>
                             </td>
-                            <td> <?php echo $row['eao_id']?></td>
                         </tr>
                     <?php }?>
                 </tbody>

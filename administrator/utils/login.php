@@ -16,7 +16,7 @@ if($_POST){
 
     if($count === 1){
         $fetch = mysqli_fetch_array($query);
-        $_SESSION['staff_id'] = $fetch['staff_id'];
+        $_SESSION['administrator_id'] = $fetch['staff_id'];
         $_SESSION['name'] = $fetch['name'];
         $_SESSION['success'] = "Login successful";
         header("location: ../home.php");

@@ -11,7 +11,7 @@ if($_POST){
         die();
     }
 
-    $query = mysqli_query($connection, "SELECT * FROM student WHERE (student_id = '$username' OR email = '$username') AND password = '$password' ");
+    $query = mysqli_query($connection, "SELECT * FROM students WHERE (student_id = '$username' OR email = '$username') AND password = '$password' ");
     $count = mysqli_num_rows($query);
 
     if($count === 1){
