@@ -32,7 +32,6 @@ require "../db/db.php";
             <ul>
                 <li> <a href="home.php"> Home </a> </li>
                 <li> <a href="eaos.php"> Experiment Approval Officers </a> </li>
-                <li> <a href="requests.php"> Approval Requests </a> </li>
                 <li> <a href="logout.php"> Logout </a> </li>
             </ul>
         </nav>

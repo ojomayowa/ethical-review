@@ -59,7 +59,7 @@ require "../db/db.php";
                         <th class="column2"> Student Name </th>
                         <th class="column3"> Experiment Title </th>
                         <th class="column5"> Request Status </th>
-                        <th class="column4">  </th>
+                        <th class="column4"> Experiment Approval Officer </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -81,7 +81,8 @@ require "../db/db.php";
 
                             </td>
                             <td>
-                                <a href="details.php?experiment_id=<?php echo $row['eid'];?>">View details & Assign to EAO</a>
+                                
+                                <?php echo $row['eao_id']?>
                             </td>
                         </tr>
                     <?php }?>
