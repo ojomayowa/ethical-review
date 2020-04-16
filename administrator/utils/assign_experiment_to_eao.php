@@ -8,7 +8,7 @@ if($_POST){
     $count = count($officers);
 
     if($count < 2){
-        $_SESSION['error'] = "Experiment must be assigned to atleast Two Experiment Approval Officers";
+        $_SESSION['error'] = "Experiment must be assigned to at least two Experiment Approval Officers";
         header("location: ../details.php?experiment_id=$experiment_id");
         die();
     }
@@ -16,7 +16,7 @@ if($_POST){
     $request_id = $_POST['request_id'];
 
     foreach($officers as $officer){
-        $query = mysqli_query($connection, "INSERT INTO eao_request_officer (request_id, eao_id) VALUES ('$request_id', '$officer')");
+        $query = mysqli_query($connection, "INSERT INTO approval_request_eao (request_id, eao_id) VALUES ('$request_id', '$officer')");
     }
 
 

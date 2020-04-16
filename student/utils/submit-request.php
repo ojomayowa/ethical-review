@@ -39,7 +39,7 @@ if ($_POST) {
 
     move_uploaded_file($file_tmp, "../../documents/" . $file_name);
 
-    $query = mysqli_query($connection, "INSERT INTO submitted_requests (student_id, experiment_id, eao_id, reasons, file_location) VALUES ('$student_id', '$experiment_id', 0, '$reasons', '$file_name')");
+    $query = mysqli_query($connection, "INSERT INTO submitted_requests (student_id, experiment_id, reasons, file_location) VALUES ('$student_id', '$experiment_id', '$reasons', '$file_name')");
 
     //update experiment approval status to submitted
     mysqli_query($connection, "UPDATE experiments SET approval_status = 3 WHERE id = '$experiment_id'");

@@ -1,7 +1,7 @@
 <?php
 session_start();
 require "../db/db.php";
-if (!isset($_SESSION['administrator_id'])) {
+if (!isset($_SESSION['eao_staff_id'])) {
     $_SESSION['error'] = "Please login to access this page";
     header("location: index.php");
     die();
@@ -21,11 +21,11 @@ $eaos = mysqli_query($connection, 'SELECT * FROM experiment_approval_officers OR
 <body>
 <header>
     <div class="left">
-        EXPERIMENT ETHICAL APPROVAL WEB APPLICATION - ADMINISTRATOR
+        EXPERIMENT ETHICAL APPROVAL WEB APPLICATION - EXPERIMENT APPROVAL OFFICER
     </div>
     <div class="right">
         <?php
-        echo strtoupper($_SESSION['name']);
+        echo strtoupper($_SESSION['eao_name']);
         ?>
         <a href="logout.php"> Logout </a>
     </div>
@@ -34,7 +34,6 @@ $eaos = mysqli_query($connection, 'SELECT * FROM experiment_approval_officers OR
 <nav>
     <ul>
         <li><a href="home.php"> Home </a></li>
-        <li><a href="eaos.php"> Experiment Approval Officers </a></li>
         <li><a href="logout.php"> Logout </a></li>
     </ul>
 </nav>
@@ -81,29 +80,14 @@ $eaos = mysqli_query($connection, 'SELECT * FROM experiment_approval_officers OR
             <b>Select at least 2 officers and assign to them</b>
             <table style="margin-top: 20px;">
                 <thead>
-                    <tr class="table100-head">
-                        <th class="column1">  </th>
-                        <th class="column2"> Name </th>
-                        <th class="column3"> Email </th>
-                    </tr>
+                <tr class="table100-head">
+                    <th class="column1"></th>
+                    <th class="column2"> Name</th>
+                    <th class="column3"> Email</th>
+                </tr>
                 </thead>
                 <tbody>
-                    <form action="utils/assign_experiment_to_eao.php" method="post">
-                        <?php $i = 1; while($row1 = mysqli_fetch_array($eaos)){?>
-                            <tr>
-                                <td> <input type="checkbox" name="eao[]" value="<?php echo $row1['staff_id'];?>"> </td>
-                                <td> <?php echo $row1['name']?></td>
-                                <td> <?php echo $row1['email']?></td>
-                            </tr>
-                        <?php }?>
-                        <tr>
-                            <td colspan="3">
-                                <input type="hidden" name="request_id" value="<?php echo $row['srid']; ?>">
-                                <input type="hidden" name="experiment_id" value="<?php echo $id; ?>">
-                                <input type="submit" value="ASSIGN" style="width: 100px;">
-                            </td>
-                        </tr>
-                    </form>
+
                 </tbody>
             </table>
         </div>
