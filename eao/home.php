@@ -50,14 +50,14 @@ require "../db/db.php";
             ?>
         </div>
         <main>
-            <h4> Approval Requests </h4>
-            <table>
+            <h4 style="margin: 0"> Approval Requests </h4>
+            <table style="margin: 0">
                 <thead>
                     <tr class="table100-head">
                         <th class="column1"> S/N </th>
                         <th class="column2"> Student Name </th>
                         <th class="column3"> Experiment Title </th>
-                        <th class="column5"> Request Status </th>
+                        <th class="column5"> Your Response</th>
                         <th class="column4">  </th>
                     </tr>
                 </thead>
@@ -69,14 +69,23 @@ require "../db/db.php";
                             <td> <?php echo $row['title']?></td>
                             <td>
                                 <?php
-                                $status = $row['approval_status'];
-                                if($status == 1){
-                                    echo "Approved";
-                                }elseif($status == 2) {
-                                    echo "Rejected";
-                                }else{ ?>
-                                    Not yet assigned
-                                <?php } ?>
+                                $request_id = $row['srid'];
+                                $eao_id = $_SESSION['eao_staff_id'];
+                                $q = mysqli_query($connection, "SELECT * FROM eao_feedbacks WHERE request_id = '$request_id' AND eao_id = '$eao_id'");
+                                $fetch = mysqli_fetch_array($q);
+                                if(mysqli_num_rows($q) == 1){
+                                    if($fetch['status']){
+                                        echo 'Approved by you';
+                                    }else{
+                                        echo 'Rejected by you';
+                                    }
+                                }else{
+                                    echo 'Not yet reviewed by you';
+                                }
+
+
+                                ?>
+
 
                             </td>
                             <td>

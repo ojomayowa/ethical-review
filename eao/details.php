@@ -77,19 +77,18 @@ $eaos = mysqli_query($connection, 'SELECT * FROM experiment_approval_officers OR
             <br>
             <br>
             <hr>
-            <b>Select at least 2 officers and assign to them</b>
-            <table style="margin-top: 20px;">
-                <thead>
-                <tr class="table100-head">
-                    <th class="column1"></th>
-                    <th class="column2"> Name</th>
-                    <th class="column3"> Email</th>
-                </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table>
+            <b> Use the form below to either approve or reject the approval request </b>
+            <hr style="margin-bottom: 10px; margin-top: 10px">
+            <form action="utils/submit_request_feedback.php" method="post">
+                <textarea style="height: 80px" name="feedback" required></textarea>
+                <hr style="margin-bottom: 10px; margin-top: 10px">
+                <input type="hidden" name="request_id" value="<?php echo $row['srid'] ?>">
+                <input type="hidden" name="experiment_id" value="<?php echo $id; ?>">
+                <input type="radio" name="status" value="1" required> Approve
+                <input type="radio" name="status" value="0" required> Reject
+                <br>
+                <input type="submit" name="approve" value="SUBMIT FEEDBACK" style="width: 190px; padding: 10px">
+            </form>
         </div>
 
     <?php } ?>
