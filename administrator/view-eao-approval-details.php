@@ -7,9 +7,13 @@ if (!isset($_SESSION['administrator_id'])) {
     die();
 }
 $id = $_GET['experiment_id'];
+$request_id = $_GET['id'];
 $submitted_requests = mysqli_query($connection, "SELECT students.id AS sid, submitted_requests.id AS srid, experiments.id AS eid, students.*, experiments.*, submitted_requests.* FROM `submitted_requests` LEFT JOIN experiments ON submitted_requests.experiment_id = experiments.id LEFT JOIN students ON submitted_requests.student_id = students.student_id WHERE experiments.id = '$id'");
+$eaos = mysqli_query($connection, 'SELECT * FROM experiment_approval_officers ORDER BY name ASC');
 
-$eaos = mysqli_query($connection, 'SELECT * FROM experiment_approval_officers ORDER BY name ASC')
+
+$query = mysqli_query($connection, "SELECT * FROM approval_request_eao LEFT JOIN experiment_approval_officers ON approval_request_eao.eao_id = experiment_approval_officers.staff_id LEFT JOIN eao_feedbacks ON approval_request_eao.request_id = eao_feedbacks.request_id WHERE approval_request_eao.request_id = '$request_id'");
+
 ?>
 <html>
 <head>
@@ -64,8 +68,7 @@ $eaos = mysqli_query($connection, 'SELECT * FROM experiment_approval_officers OR
             <p><b>Description:</b> <br>
                 <?php echo $row['description']; ?>
             </p>
-        </div>
-        <div class="main-right">
+
             <h5 style="font-weight: bold;"><b>Approval Request Details</b></h5>
             <p><b> Reasons :</b> <br>
                 <?php echo $row['reasons']; ?>
@@ -75,37 +78,28 @@ $eaos = mysqli_query($connection, 'SELECT * FROM experiment_approval_officers OR
                 <?php echo $row['file_location']; ?> <br> <a href="../documents/<?php echo $row['file_location'] ?>">
                     Download </a>
             </p>
-            <br>
-            <br>
+        </div>
+        <div class="main-right">
+            <b>Experiment Approval Feedbacks</b>
             <hr>
-            <b>Select at least 2 officers and assign to them</b>
-            <table style="margin-top: 20px;">
-                <thead>
-                    <tr class="table100-head">
-                        <th class="column1">  </th>
-                        <th class="column2"> Name </th>
-                        <th class="column3"> Email </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <form action="utils/assign_experiment_to_eao.php" method="post">
-                        <?php $i = 1; while($row1 = mysqli_fetch_array($eaos)){?>
-                            <tr>
-                                <td> <input type="checkbox" name="eao[]" value="<?php echo $row1['staff_id'];?>"> </td>
-                                <td> <?php echo $row1['name']?></td>
-                                <td> <?php echo $row1['email']?></td>
-                            </tr>
-                        <?php }?>
-                        <tr>
-                            <td colspan="3">
-                                <input type="hidden" name="request_id" value="<?php echo $row['srid']; ?>">
-                                <input type="hidden" name="experiment_id" value="<?php echo $id; ?>">
-                                <input type="submit" value="ASSIGN" style="width: 100px;">
-                            </td>
-                        </tr>
-                    </form>
-                </tbody>
-            </table>
+            <?php while($p = mysqli_fetch_array($query)){?>
+                <b>EAO Name</b>: <?php echo $p['name']; ?> <br>
+                <b>FEEDBACK</b>: <?php echo $p['feedback']; ?><br>
+                <b>APPROVAL STATUS</b> <?php echo $p['status'] ? 'Approved' : 'Rejected'; ?>
+                <br><br>
+            <?php }?>
+
+            <b>Administrator Final Approval</b>
+            <form action="utils/final-approval.php" method="post">
+                <input type="hidden" name="experiment_id" value="<?php echo $id?>">
+                <select name="status" required>
+                    <option value="" selected></option>
+                    <option value="1"> Approve </option>
+                    <option value="2"> Reject </option>
+                </select> <br>
+                <input type="submit" value="SUBMIT">
+            </form>
+            <hr>
         </div>
 
     <?php } ?>
