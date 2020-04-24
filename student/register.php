@@ -45,10 +45,17 @@ session_start();
                         </div>
                         <div class="form-wrapper">
                             <label> Password </label>
-                            <input type="password" minlength="8" name="password" required>
+                            <input type="password" name="password" required>
+                        </div>
+                        <div class="form-wrapper">
+                            <label> Confirm Password </label>
+                            <input type="password" name="confirm" required>
                         </div>
                         <div class="form-wrapper">
                             <input type="submit" required value="REGISTER">
+                        </div>
+                        <div class="form-wrapper">
+                            Login <a href="register.php">here</a>
                         </div>
                     </form>
 

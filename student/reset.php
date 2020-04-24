@@ -11,10 +11,10 @@ session_start();
         <main>
             <section id="wrapper">
 
-                    <form action="utils/login.php" method="post">
+                    <form action="utils/reset.php" method="post">
                         <div class="form-wrapper">
                             <h3> EXPERIMENT ETHICAL APPROVAL <br> WEB APPLICATION </h3>
-                            <h4> STUDENT LOGIN PAGE </h4>
+                            <h4> STUDENT PASSWORD RESET PAGE </h4>
                         </div>
                         <div class="status">
                             <?php
@@ -35,16 +35,12 @@ session_start();
                             <label> Student ID or Email Address </label>
                             <input type="text" name="username" required>
                         </div>
+
                         <div class="form-wrapper">
-                            <label> Password </label>
-                            <input type="password" name="password" required>
+                            <input type="submit" required value="RESET PASSWORD">
                         </div>
                         <div class="form-wrapper">
-                            <input type="submit" required value="LOGIN">
-                        </div>
-                        <div class="form-wrapper">
-                            Register <a href="register.php">here</a> <br>
-                            Forgot password <a href="reset.php">here</a> <br>
+                            Login <a href="index.php">here</a>
                         </div>
                     </form>
             </section>

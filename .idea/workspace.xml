@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7e37925-ef0d-4994-b9e9-42fbf751b59f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/administrator/utils/final-approval.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/view-eao-approval-details.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/reset.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/update-password.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/utils/reset.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/utils/update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/details.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/details.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/utils/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/utils/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,18 +36,18 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/administrator/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/student/utils" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ethicalapprover\student" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ethicalapprover\student\utils" />
+      <recent name="C:\xampp\htdocs\ethicalapprover\student" />
       <recent name="C:\xampp\htdocs\ethicalapprover\administrator\utils" />
       <recent name="C:\xampp\htdocs\ethicalapprover\administrator" />
       <recent name="C:\xampp\htdocs\ethicalapprover" />
-      <recent name="C:\xampp\htdocs\ethicalapprover\student\utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\ethicalapprover\student" />
     </key>
   </component>
@@ -64,7 +68,8 @@
       <workItem from="1586950519114" duration="6758000" />
       <workItem from="1587073481664" duration="2729000" />
       <workItem from="1587204392654" duration="6018000" />
-      <workItem from="1587501355188" duration="4465000" />
+      <workItem from="1587501355188" duration="5798000" />
+      <workItem from="1587755208675" duration="3586000" />
     </task>
     <task id="LOCAL-00001" summary="added experiment delete and create actions">
       <created>1586257257868</created>
@@ -129,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587209802061</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="functionality done">
+      <created>1587505964826</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587505964826</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,17 +156,18 @@
     <MESSAGE value="added approval request update" />
     <MESSAGE value="added approval officers" />
     <MESSAGE value="added experiment assignment to approval officers" />
-    <option name="LAST_COMMIT_MESSAGE" value="added experiment assignment to approval officers" />
+    <MESSAGE value="functionality done" />
+    <option name="LAST_COMMIT_MESSAGE" value="functionality done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587075403483">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1587075403483" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1587209799330">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1587505960895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587209799330" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587505960895" />
     <state x="517" y="288" key="NewPhpFileDialog" timestamp="1586253907240">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -163,10 +176,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586952148685" />
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1587209804166">
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1587505968433">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1587209804166" />
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1587505968433" />
     <state x="518" y="223" key="com.intellij.ide.util.TipDialog" timestamp="1586697290733">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
