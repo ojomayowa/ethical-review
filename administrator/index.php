@@ -42,6 +42,9 @@ session_start();
                         <div class="form-wrapper">
                             <input type="submit" required value="LOGIN">
                         </div>
+                        <div class="form-wrapper">
+                            Register <a href="register.php">here</a>
+                        </div>
                     </form>
             </section>
         </main>

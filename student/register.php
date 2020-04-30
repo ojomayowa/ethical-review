@@ -55,7 +55,7 @@ session_start();
                             <input type="submit" required value="REGISTER">
                         </div>
                         <div class="form-wrapper">
-                            Login <a href="register.php">here</a>
+                            Login <a href="index.php">here</a>
                         </div>
                     </form>
 
